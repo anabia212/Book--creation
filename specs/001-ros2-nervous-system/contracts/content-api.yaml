@@ -1,0 +1,66 @@
+# API Contract: Content Retrieval
+
+## Purpose
+This API contract defines the interface for retrieving educational content from the ROS 2 Nervous System module. This will enable future integration with RAG (Retrieval-Augmented Generation) systems for AI-powered Q&A capabilities.
+
+## Endpoints
+
+### GET /api/content/{module}/{chapter}
+Retrieve specific chapter content from the ROS 2 module.
+
+**Path Parameters:**
+- module (string): Module identifier (e.g., "ros2-nervous-system")
+- chapter (string): Chapter identifier (e.g., "overview", "communication", "urdf")
+
+**Response:**
+- 200 OK: Content retrieved successfully
+  - content (string): Markdown content of the chapter
+  - title (string): Title of the chapter
+  - lastModified (string): ISO 8601 timestamp of last modification
+
+**Example Request:**
+```
+GET /api/content/ros2-nervous-system/overview
+```
+
+**Example Response:**
+```json
+{
+  "content": "# ROS 2 Overview\n\nROS 2 (Robot Operating System 2) is a middleware...",
+  "title": "Introduction to ROS 2 and Robot Middleware",
+  "lastModified": "2025-12-29T10:00:00Z"
+}
+```
+
+### GET /api/content/{module}
+Retrieve list of available chapters in the module.
+
+**Path Parameters:**
+- module (string): Module identifier
+
+**Response:**
+- 200 OK: List of chapters retrieved successfully
+  - chapters (array): List of chapter objects with id, title, and brief description
+
+**Example Response:**
+```json
+{
+  "chapters": [
+    {
+      "id": "overview",
+      "title": "Introduction to ROS 2 and Robot Middleware",
+      "description": "What ROS 2 is and why it matters for Physical AI"
+    },
+    {
+      "id": "communication",
+      "title": "ROS 2 Communication Primitives",
+      "description": "ROS 2 Nodes, Topics, and Services with rclpy"
+    },
+    {
+      "id": "urdf",
+      "title": "Humanoid Representation with URDF",
+      "description": "Modeling humanoid robots: links, joints, and sensors"
+    }
+  ]
+}
+```
