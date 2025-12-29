@@ -9,9 +9,9 @@ const config = {
   favicon: 'img/favicon.ico',
 
   // GitHub pages deployment config.
-  organizationName: 'your-username', // Usually your GitHub org/user name.
-  projectName: 'my-course', // Usually your repo name.
-  deploymentBranch: 'gh-pages', // The branch to deploy to.
+  organizationName: 'anabia212', // Usually your GitHub org/user name.
+  projectName: 'book--creation', // Usually your repo name.
+  deploymentBranch: 'main', // The branch to deploy to.
 
   // Set the production url of your site here
   url: 'https://book___creation..vercel.app',
