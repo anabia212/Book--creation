@@ -8,28 +8,18 @@ const config = {
   tagline: 'Learning ROS 2 as the nervous system of humanoid robots',
   favicon: 'img/favicon.ico',
 
-  // GitHub pages deployment config.
-  organizationName: 'anabia212', // Usually your GitHub org/user name.
-  projectName: 'book--creation', // Usually your repo name.
-  deploymentBranch: 'main', // The branch to deploy to.
-
   // Set the production url of your site here
-  url: 'https://book___creation..vercel.app',
-  // Set the /<baseUrl>/ pathname under which your site is served
-  // For GitHub Pages: https://<USERNAME>.github.io/<REPO>/
-  baseUrl: '/',
+  url: 'https://book___creation..vercel.app', // Replace with your actual Vercel URL
+  baseUrl: '/', // Root path
 
-  // GitHub pages deployment config.
-  // If you aren't using GitHub Pages, you don't need these.
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  // GitHub pages deployment config (not needed for Vercel)
+  organizationName: 'anabia212', // Your GitHub username
+  projectName: 'book--creation', // Your GitHub repo name
+  deploymentBranch: 'main', // Branch for deployment
 
-  onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
+  onBrokenLinks: 'throw', // Will throw error if broken links exist
+  onBrokenMarkdownLinks: 'warn', // Warn for broken Markdown links
 
-  // Even if you don't use internationalization, you can use this field to set
-  // useful metadata like html lang. For example, if your site is Chinese, you
-  // may want to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'en',
     locales: ['en'],
@@ -42,14 +32,12 @@ const config = {
       ({
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          // Change this to your repo for "Edit this page" links
+          editUrl: 'https://github.com/anabia212/book___creation/tree/main/',
         },
-        blog: false, // Optional: disable the blog plugin
+        blog: false, // disable the blog plugin
         theme: {
-          customCss: './src/css/custom.css',
+          customCss: require.resolve('./src/css/custom.css'),
         },
       }),
     ],
@@ -58,7 +46,6 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
         title: 'Physical AI Course',
@@ -74,7 +61,7 @@ const config = {
             label: 'Tutorial',
           },
           {
-            href: 'https://github.com/facebook/docusaurus',
+            href: 'https://github.com/anabia212/book___creation',
             label: 'GitHub',
             position: 'right',
           },
@@ -110,12 +97,12 @@ const config = {
             items: [
               {
                 label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                href: 'https://github.com/anabia212/book___creation',
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Anabia Asma. Built with Docusaurus.`,
       },
       prism: {
         theme: require('prism-react-renderer').themes.github,
