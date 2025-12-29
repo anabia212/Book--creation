@@ -14,10 +14,10 @@ const config = {
   deploymentBranch: 'gh-pages', // The branch to deploy to.
 
   // Set the production url of your site here
-  url: 'https://your-docusaurus-site.example.com',
+  url: 'https://book___creation..vercel.app',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub Pages: https://<USERNAME>.github.io/<REPO>/
-  baseUrl: '/my-course/',
+  baseUrl: '/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub Pages, you don't need these.
