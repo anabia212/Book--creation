@@ -10,8 +10,8 @@
 
 1. **Clone or download the course repository**
    ```bash
-git clone https://github.com/anabia212/Book--creation.git
-cd book_frontend
+   git clone https://github.com/anabia212/Book--creation.git
+   cd book_frontend
 
    ```
 

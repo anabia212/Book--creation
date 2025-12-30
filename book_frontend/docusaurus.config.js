@@ -1,5 +1,5 @@
 // @ts-check
-import { themes as prismThemes } from 'prism-react-renderer';
+import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -7,15 +7,11 @@ const config = {
   tagline: 'Learning ROS 2 as the nervous system of humanoid robots',
   favicon: 'img/favicon.ico',
 
-  future: {
-    v4: true,
-  },
-
-  // ✅ Vercel production URL
-  url: 'https://book-creation.vercel.app',
+  // Production URL for your deployed site
+  url: 'https://bookcreation-two.vercel.app',
   baseUrl: '/',
 
-  // ✅ Your GitHub repo (NOT Facebook)
+  // GitHub repo info
   organizationName: 'anabia212',
   projectName: 'Book--creation',
 
@@ -35,7 +31,7 @@ const config = {
           sidebarPath: require.resolve('./sidebars.js'),
           editUrl: 'https://github.com/anabia212/Book--creation/tree/main/book_frontend/',
         },
-        blog: false, // ✅ disabled (you don’t need it)
+        blog: false,
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
@@ -45,6 +41,9 @@ const config = {
 
   themeConfig: {
     image: 'img/docusaurus-social-card.jpg',
+    colorMode: {
+      respectPrefersColorScheme: true,
+    },
     navbar: {
       title: 'Physical AI Course',
       logo: {
@@ -71,10 +70,20 @@ const config = {
         {
           title: 'Docs',
           items: [
-            {
-              label: 'Course Introduction',
-              to: '/docs/intro',
-            },
+            { label: 'Tutorial', to: '/docs/intro' },
+          ],
+        },
+        {
+          title: 'Community',
+          items: [
+            { label: 'ROS Community', href: 'https://discourse.ros.org/' },
+            { label: 'Discord', href: 'https://discordapp.com/invite/docusaurus' },
+          ],
+        },
+        {
+          title: 'More',
+          items: [
+            { label: 'GitHub', href: 'https://github.com/anabia212/Book--creation' },
           ],
         },
       ],
@@ -87,4 +96,4 @@ const config = {
   },
 };
 
-export default config;
+module.exports = config;
