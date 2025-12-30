@@ -11,7 +11,7 @@
 1. **Clone or download the course repository**
    ```bash
    git clone <repository-url>
-   cd my-course
+   cd book--creation
    ```
 
 2. **Install dependencies**

@@ -10,12 +10,12 @@
 
 1. **Install Docusaurus** (if not already installed):
    ```bash
-   npx create-docusaurus@latest my-course-classic classic
+   npx create-docusaurus@latest book--creation-classic classic
    ```
 
 2. **Navigate to your project directory**:
    ```bash
-   cd my-course
+   cd book--creation
    ```
 
 3. **Install additional dependencies** (if needed):
